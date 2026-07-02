@@ -57,7 +57,14 @@ export default function Navbar() {
           style={{ display: "none", background: "none", border: "none", padding: 8 }}
         >
           <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" strokeWidth="2">
-            <path d="M3 6h18M3 12h18M3 18h18" />
+            {open ? (
+              <>
+                <path d="M6 6l12 12" />
+                <path d="M18 6l-12 12" />
+              </>
+            ) : (
+              <path d="M3 6h18M3 12h18M3 18h18" />
+            )}
           </svg>
         </button>
       </div>

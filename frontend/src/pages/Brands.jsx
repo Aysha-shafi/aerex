@@ -18,7 +18,7 @@ export default function Brands() {
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          minHeight: "580px",
+          minHeight: "650px",
           display: "flex",
           alignItems: "center",
           color: "#fff",

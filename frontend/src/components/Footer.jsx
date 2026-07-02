@@ -18,28 +18,29 @@ export default function Footer() {
         </div>
 
         <div>
-          <h4 style={{ color: "var(--navy)", fontSize: 14, marginBottom: 16 }}>Company</h4>
+          <h4 style={{ color: "var(--navy)", fontSize: 14, marginBottom: 16 }}>QUICK LINKS</h4>
           <ul style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-            <li><Link to="/about" style={{ fontSize: 14, color: "var(--ink-soft)" }}>About Us</Link></li>
-            <li><Link to="/brands" style={{ fontSize: 14, color: "var(--ink-soft)" }}>Brands</Link></li>
-            <li><Link to="/careers" style={{ fontSize: 14, color: "var(--ink-soft)" }}>Careers</Link></li>
-            <li><Link to="/contact" style={{ fontSize: 14, color: "var(--ink-soft)" }}>Contact</Link></li>
+            <li><Link to="/about" className="footer-link">About Us</Link></li>
+            <li><Link to="/products" className="footer-link">Products</Link></li>
+            <li><Link to="/brands" className="footer-link">Brands</Link></li>
+            <li><Link to="/careers" className="footer-link">Careers</Link></li>
+            <li><Link to="/contact" className="footer-link">Contact</Link></li>
           </ul>
         </div>
 
         <div>
-          <h4 style={{ color: "var(--navy)", fontSize: 14, marginBottom: 16 }}>Catalog</h4>
+          <h4 style={{ color: "var(--navy)", fontSize: 14, marginBottom: 16 }}>CATALOG</h4>
           <ul style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-            <li><Link to="/products" style={{ fontSize: 14, color: "var(--ink-soft)" }}>All Products</Link></li>
-            <li><Link to="/products?category=air-conditioning-systems" style={{ fontSize: 14, color: "var(--ink-soft)" }}>AC Systems</Link></li>
-            <li><Link to="/products?category=refrigerants" style={{ fontSize: 14, color: "var(--ink-soft)" }}>Refrigerants</Link></li>
-            <li><Link to="/products?category=chillers" style={{ fontSize: 14, color: "var(--ink-soft)" }}>Chillers</Link></li>
+            <li><Link to="/products" className="footer-link">All Products</Link></li>
+            <li><Link to="/products?category=air-conditioning-systems" className="footer-link">AC Systems</Link></li>
+            <li><Link to="/products?category=refrigerants" className="footer-link">Refrigerants</Link></li>
+            <li><Link to="/products?category=chillers" className="footer-link">Chillers</Link></li>
           </ul>
         </div>
 
         <div>
           <h4 style={{ color: "var(--navy)", fontSize: 14, marginBottom: 16 }}>
-            Contact
+            CONTACT
           </h4>
 
           <ul
@@ -51,7 +52,7 @@ export default function Footer() {
               color: "var(--ink-soft)",
             }}
           >
-            <li
+            <li className="footer-link" 
               style={{
                 display: "flex",
                 alignItems: "flex-start",
@@ -68,7 +69,7 @@ export default function Footer() {
               </span>
             </li>
 
-            <li
+            <li className="footer-link" 
               style={{
                 display: "flex",
                 alignItems: "center",
@@ -78,15 +79,13 @@ export default function Footer() {
               <FaPhoneAlt
                 style={{ color: "var(--gold)", flexShrink: 0 }}
               />
-              <a
-                href="tel:+971545087262"
-                style={{ color: "var(--ink-soft)" }}
-              >
+              <a href="tel:+971545087262" style={{ color: "inherit" }}>
                 +971 54 508 7262, +971 54 525 3697
               </a>
             </li>
 
             <li
+              className="footer-link"
               style={{
                 display: "flex",
                 alignItems: "center",
@@ -96,15 +95,12 @@ export default function Footer() {
               <FaEnvelope
                 style={{ color: "var(--gold)", flexShrink: 0 }}
               />
-              <a
-                href="mailto:sales@aerexgroup.com"
-                style={{ color: "var(--ink-soft)" }}
-              >
+              <a href="mailto:sales@aerexgroup.com" style={{ color: "inherit" }}>
                 sales@aerexgroup.com
               </a>
             </li>
 
-            <li
+            <li className="footer-link" 
               style={{
                 display: "flex",
                 alignItems: "center",
@@ -114,10 +110,7 @@ export default function Footer() {
               <FaEnvelope
                 style={{ color: "var(--gold)", flexShrink: 0 }}
               />
-              <a
-                href="mailto:mohammed@aerexgroup.com"
-                style={{ color: "var(--ink-soft)" }}
-              >
+              <a href="mailto:mohammed@aerexgroup.com" style={{ color: "inherit" }}>
                 mohammed@aerexgroup.com
               </a>
             </li>

@@ -161,7 +161,7 @@ button { font-family: inherit; cursor: pointer; }
 @media (max-width: 768px) {
 
   .footer-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 2fr;
     gap: 30px;
   }
 
@@ -195,5 +195,50 @@ button { font-family: inherit; cursor: pointer; }
   .footer-grid a {
     font-size: 13px;
   }
+@media (max-width: 768px) {
 
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  /* AEREX section full width */
+  .footer-grid > div:nth-child(1) {
+    grid-column: 1 / -1;
+  }
+
+  /* Quick Links left */
+  .footer-grid > div:nth-child(2) {
+    grid-column: 1;
+  }
+
+  /* Products right */
+  .footer-grid > div:nth-child(3) {
+    grid-column: 2;
+  }
+
+  /* Contact full width below */
+  .footer-grid > div:nth-child(4) {
+    grid-column: 1 / -1;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    padding: 18px 20px;
+  }
+}
+}
+.footer-link {
+  font-size: 14px;
+  color: var(--ink-soft);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover,
+.footer-link:hover a {
+  color: var(--blue);
+  text-decoration: underline;
 }

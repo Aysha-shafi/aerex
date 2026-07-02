@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import api from "../api/axios.js";
 import Sweep from "../components/Sweep.jsx";
 import ProductCard from "../components/ProductCard.jsx";
+import homeBg from "../assets/home-bg.png";
 
 const pillars = [
   {
@@ -31,22 +32,111 @@ export default function Home() {
   return (
     <>
       {/* HERO */}
-      <section style={{ background: "linear-gradient(160deg, var(--navy-deep), var(--navy) 60%)", color: "#fff", position: "relative", overflow: "hidden" }}>
-        <div className="container" style={{ padding: "120px 32px 80px", position: "relative", zIndex: 2 }}>
-          <div className="eyebrow" style={{ color: "var(--blue-light)" }}>AEREX LLC &mdash; Sharjah, UAE</div>
-          <h1 style={{ fontSize: "clamp(36px, 5vw, 60px)", color: "#fff", marginTop: 18, maxWidth: 760, lineHeight: 1.08 }}>
-            Climate systems engineered for the Emirates' extremes.
+      <section
+        style={{
+          backgroundImage: `linear-gradient(rgba(33, 45, 78, 0.72), rgba(20, 35, 70, 0.72)), url(${homeBg})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          minHeight: "650px",
+          display: "flex",
+          alignItems: "center",
+          color: "#fff",
+          position: "relative",
+          overflow: "hidden",
+        }}
+      >
+        <div
+          style={{
+            width: "100%",
+            maxWidth: "1600px",
+            margin: "0 auto",
+            padding: "0 60px",
+            position: "relative",
+            zIndex: 1,
+          }}
+        >
+          <div
+            className="eyebrow"
+            style={{
+              color: "var(--blue-light)",
+            }}
+          >
+            AEREX LLC — Sharjah, UAE
+          </div>
+
+          <h1
+            style={{
+              fontSize: "clamp(36px,5vw,60px)",
+              color: "#fff",
+              marginTop: 18,
+              maxWidth: 760,
+              lineHeight: 1.08,
+            }}
+          >
+            Climate Systems Engineered for the Emirates' Extremes.
           </h1>
-          <p style={{ fontSize: 17, color: "#aab6c9", maxWidth: 560, marginTop: 22, lineHeight: 1.7 }}>
-            AEREX supplies and supports HVAC, refrigeration and ventilation equipment built to perform reliably
-            in Gulf conditions &mdash; backed by an engineering-first approach to every project.
+
+          <p
+            style={{
+              fontSize: 17,
+              color: "#d8e0ea",
+              maxWidth: 560,
+              marginTop: 22,
+              lineHeight: 1.8,
+            }}
+          >
+            AEREX supplies and supports HVAC, refrigeration, and ventilation
+            equipment built to perform reliably in Gulf conditions—backed by an
+            engineering-first approach to every project.
           </p>
-          <div style={{ display: "flex", gap: 14, marginTop: 36 }}>
-            <Link to="/products" className="btn btn-light">Browse Products</Link>
-            <Link to="/contact" className="btn btn-outline" style={{ borderColor: "#3fa9f5", color: "#fff" }}>Talk to Sales</Link>
+
+          <div
+            style={{
+              display: "flex",
+              gap: 14,
+              marginTop: 36,
+              flexWrap: "wrap",
+            }}
+          >
+            <Link
+              to="/products"
+              className="btn btn-light"
+              style={{
+                minWidth: 190,
+                justifyContent: "center",
+                display: "inline-flex",
+              }}
+            >
+              Browse Products
+            </Link>
+
+            <Link
+              to="/contact"
+              className="btn btn-outline"
+              style={{
+                borderColor: "#3fa9f5",
+                color: "#fff",
+                minWidth: 190,
+                justifyContent: "center",
+                display: "inline-flex",
+              }}
+            >
+              Talk to Sales
+            </Link>
           </div>
         </div>
-        <div style={{ position: "absolute", inset: 0, opacity: 0.5 }}>
+
+
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            opacity: 0.45,
+            zIndex: 0,
+            pointerEvents: "none",
+          }}
+        >
           <Sweep variant="dark" />
         </div>
       </section>

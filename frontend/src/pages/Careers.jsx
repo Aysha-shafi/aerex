@@ -18,7 +18,7 @@ export default function Careers() {
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          minHeight: "590px",
+          minHeight: "650px",
           display: "flex",
           alignItems: "center",
           color: "#fff",

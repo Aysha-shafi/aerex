@@ -55,7 +55,7 @@ ${form.message}`;
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
     color: "#fff",
-    minHeight: "520px",
+    minHeight: "650px",
     display: "flex",
     alignItems: "center",
   }}
@@ -84,7 +84,8 @@ ${form.message}`;
               marginTop: 16,
             }}
           >
-            Let's talk about your project.
+            Let's talk about <br/>
+            your project.
           </h1>
         </div>
       </section>
@@ -330,7 +331,9 @@ ${form.message}`;
                   display: "block",
                 }}
               />
+              
             </div>
+            
           </div>
         </div>
 

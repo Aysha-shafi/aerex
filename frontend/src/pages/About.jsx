@@ -1,5 +1,7 @@
 import Sweep from "../components/Sweep.jsx";
-
+import aboutBg from "../assets/aboutt.png";
+import visionBg from "../assets/vision1.png";
+import missionBg from "../assets/misiion1.png";
 const values = [
   { title: "Precision", text: "Specifications are verified against site conditions before recommendation." },
   { title: "Availability", text: "Stocked inventory across core categories to minimize project downtime." },
@@ -9,7 +11,50 @@ const values = [
 export default function About() {
   return (
     <>
-      <section style={{ background: "var(--navy-deep)", color: "#fff" }}>
+    <section
+      style={{
+        backgroundImage: ` url(${aboutBg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        color: "#fff",
+        minHeight: "650px",
+        display: "flex",
+        alignItems: "center",
+      }}
+    >
+           <div
+      style={{
+        width: "100%",
+        maxWidth: "1600px",
+        margin: "0 auto",
+        padding: "0 60px",
+      }}
+    >
+              <div
+                className="eyebrow"
+                style={{
+                  color: "var(--blue-light)",
+                }}
+              >
+                About AEREX
+              </div>
+    
+              <h1
+  style={{
+    color: "#fff",
+    fontSize: "clamp(32px, 4vw, 46px)",
+    marginTop: 16,
+    maxWidth: "18ch",
+    lineHeight: "1.2",
+    whiteSpace: "normal",
+  }}
+>
+  A Sharjah-based supplier built around technical reliability.
+</h1>
+            </div>
+          </section>
+      {/* <section style={{ background: "var(--navy-deep)", color: "#fff" }}>
         <div className="container" style={{ padding: "90px 32px 64px" }}>
           <div className="eyebrow" style={{ color: "var(--blue-light)" }}>About AEREX</div>
           <h1 style={{ color: "#fff", fontSize: "clamp(32px,4vw,46px)", marginTop: 16, maxWidth: 700 }}>
@@ -17,7 +62,7 @@ export default function About() {
           </h1>
         </div>
         <Sweep variant="dark" />
-      </section>
+      </section> */}
 
       <section className="section">
         <div className="container grid-2">
@@ -54,6 +99,71 @@ export default function About() {
           </div>
         </div>
       </section>
+      {/* VISION & MISSION */}
+      <section className="section" style={{ background: "var(--navy-deep)" }}>
+        <div className="container grid-2" style={{ gap: 32 }}>
+          {/* Vision */}
+<div
+  style={{
+    backgroundImage: `linear-gradient(rgba(7,20,45,0.75), rgba(7,20,45,0.75)), url(${visionBg})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    border: "1px solid rgba(255,255,255,0.08)",
+    borderRadius: 6,
+    padding: 40,
+    color: "#fff",
+  }}
+>            <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 22 }}>
+              <div style={{ width: 48, height: 48, borderRadius: "50%", background: "var(--blue)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round">
+                  <circle cx="12" cy="12" r="3" />
+                  <path d="M2 12C4.5 7 8 4 12 4s7.5 3 10 8c-2.5 5-6 8-10 8S4.5 17 2 12z" />
+                </svg>
+              </div>
+              <div className="eyebrow" style={{ color: "var(--blue-light)" }}>Our Vision</div>
+            </div>
+            <h2 style={{ color: "#ffffff", fontSize: 22, lineHeight: 1.4 }}>
+              To be the most trusted name in climate and refrigeration solutions across the United Arab Emirates.
+            </h2>
+            <p style={{ color: "#aab6c9", fontSize: 14.5, marginTop: 16, lineHeight: 1.8 }}>
+              We envision a UAE where every building, facility, and cold chain operation is supported by
+              correctly engineered, reliably maintained equipment — chosen by professionals who understand
+              both the technology and the Gulf environment it must perform in.
+            </p>
+          </div>
+
+          {/* Mission */}
+          <div
+            style={{
+              backgroundImage: `linear-gradient(rgba(7,20,45,0.75), rgba(7,20,45,0.75)), url(${missionBg})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              border: "1px solid rgba(255,255,255,0.08)",
+              borderRadius: 6,
+              padding: 40,
+              color: "#fff",
+            }}
+          >
+            <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 22 }}>
+              <div style={{ width: 48, height: 48, borderRadius: "50%", background: "var(--blue)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round">
+                  <path d="M12 2L15 9H22L16.5 13.5L18.5 21L12 17L5.5 21L7.5 13.5L2 9H9L12 2Z" />
+                </svg>
+              </div>
+              <div className="eyebrow" style={{ color: "var(--blue-light)" }}>Our Mission</div>
+            </div>
+            <h2 style={{ color: "#ffffff", fontSize: 22, lineHeight: 1.4 }}>
+              To deliver engineering-led supply, dependable stock, and responsive support for every project we serve.
+            </h2>
+            <p style={{ color: "#aab6c9", fontSize: 14.5, marginTop: 16, lineHeight: 1.8 }}>
+              Our mission is to match the right equipment to every requirement — from a single split unit to a
+              full chiller plant — backed by honest technical advice, genuine manufacturer-sourced products,
+              and service that doesn't stop at the point of sale.
+            </p>
+          </div>
+        </div>
+      </section>
+
 
       <section className="section-tight" style={{ background: "var(--paper)", borderTop: "1px solid var(--line)" }}>
         <div className="container">
