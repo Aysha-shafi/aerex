@@ -1,6 +1,9 @@
 import axios from "axios";
 
-const api = axios.create({ baseURL: "/api" });
+const API_URL = import.meta.env.VITE_API_URL;
+const base = API_URL ? `${API_URL.replace(/\/$/, "")}/api` : "/api";
+
+const api = axios.create({ baseURL: base });
 
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem("aerex_admin_token");
