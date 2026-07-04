@@ -242,3 +242,97 @@ button { font-family: inherit; cursor: pointer; }
   color: var(--blue);
   text-decoration: underline;
 }
+/* ===========================
+   HOME HERO
+=========================== */
+
+.hero-content {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 110px 60px 80px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.hero-buttons .btn {
+  min-width: 210px;
+  justify-content: center;
+}
+
+/* Tablet */
+
+@media (max-width: 992px) {
+
+  .hero-content {
+    padding: 100px 40px 70px;
+  }
+
+}
+
+/* Mobile */
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+  .hero-content {
+    padding: 95px 24px 60px;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(34px, 8vw, 44px) !important;
+    line-height: 1.08 !important;
+    max-width: 100%;
+  }
+
+  .hero-content p {
+    font-size: 16px !important;
+    max-width: 100% !important;
+    line-height: 1.8;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-direction: row;      /* keep in one row */
+    gap: 12px;
+    margin-top: 36px;
+    flex-wrap: nowrap;        /* don't wrap */
+  }
+
+  .hero-buttons .btn {
+    flex: 1;                  /* both buttons equal width */
+    min-width: 0;
+    padding: 14px 18px;
+    font-size: 15px;
+    justify-content: center;
+  }
+
+}
+
+/* Small Mobile */
+
+@media (max-width: 480px) {
+
+  .hero-content {
+    padding: 90px 20px 55px;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(30px, 9vw, 36px) !important;
+  }
+
+  .hero-content p {
+    font-size: 15px !important;
+  }
+
+  .hero-buttons .btn {
+    max-width: 100%;
+  }
+
+}

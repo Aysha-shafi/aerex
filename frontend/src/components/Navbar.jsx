@@ -46,27 +46,29 @@ export default function Navbar() {
           ))}
         </nav>
 
-        <a href="tel:+971545087262" className="btn btn-primary nav-cta" style={{ display: "none" }}>
-          Get a Quote
-        </a>
+        <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+          <a href="tel:+971545087262" className="btn btn-primary">
+            Get a Quote
+          </a>
 
-        <button
-          aria-label="Toggle menu"
-          onClick={() => setOpen(!open)}
-          className="nav-toggle"
-          style={{ display: "none", background: "none", border: "none", padding: 8 }}
-        >
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" strokeWidth="2">
-            {open ? (
-              <>
-                <path d="M6 6l12 12" />
-                <path d="M18 6l-12 12" />
-              </>
-            ) : (
-              <path d="M3 6h18M3 12h18M3 18h18" />
-            )}
-          </svg>
-        </button>
+          <button
+            aria-label="Toggle menu"
+            onClick={() => setOpen(!open)}
+            className="nav-toggle"
+            style={{ display: "none", background: "none", border: "none", padding: 8 }}
+          >
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" strokeWidth="2">
+              {open ? (
+                <>
+                  <path d="M6 6l12 12" />
+                  <path d="M18 6l-12 12" />
+                </>
+              ) : (
+                <path d="M3 6h18M3 12h18M3 18h18" />
+              )}
+            </svg>
+          </button>
+        </div>
       </div>
 
       {open && (
@@ -81,11 +83,8 @@ export default function Navbar() {
 
       <style>{`
         @media (max-width: 900px) {
-          .nav-desktop, .nav-cta { display: none !important; }
+          .nav-desktop { display: none !important; }
           .nav-toggle { display: block !important; }
-        }
-        @media (min-width: 901px) {
-          .nav-cta { display: inline-flex !important; }
         }
       `}</style>
     </header>
